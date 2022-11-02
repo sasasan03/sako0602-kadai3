@@ -14,6 +14,7 @@
 		69F120F8290E5B2E0022C34A /* sako0602_kadai3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F120F7290E5B2E0022C34A /* sako0602_kadai3Tests.swift */; };
 		69F12102290E5B2E0022C34A /* sako0602_kadai3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F12101290E5B2E0022C34A /* sako0602_kadai3UITests.swift */; };
 		69F12104290E5B2E0022C34A /* sako0602_kadai3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F12103290E5B2E0022C34A /* sako0602_kadai3UITestsLaunchTests.swift */; };
+		69F12111290E61F00022C34A /* ExperimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F12110290E61F00022C34A /* ExperimentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		69F120FD290E5B2E0022C34A /* sako0602-kadai3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sako0602-kadai3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F12101290E5B2E0022C34A /* sako0602_kadai3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sako0602_kadai3UITests.swift; sourceTree = "<group>"; };
 		69F12103290E5B2E0022C34A /* sako0602_kadai3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sako0602_kadai3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		69F12110290E61F00022C34A /* ExperimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				69F120E6290E5B2A0022C34A /* sako0602_kadai3App.swift */,
 				69F120E8290E5B2A0022C34A /* ContentView.swift */,
+				69F12110290E61F00022C34A /* ExperimentView.swift */,
 				69F120EA290E5B2E0022C34A /* Assets.xcassets */,
 				69F120EC290E5B2E0022C34A /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69F12111290E61F00022C34A /* ExperimentView.swift in Sources */,
 				69F120E9290E5B2A0022C34A /* ContentView.swift in Sources */,
 				69F120E7290E5B2A0022C34A /* sako0602_kadai3App.swift in Sources */,
 			);
