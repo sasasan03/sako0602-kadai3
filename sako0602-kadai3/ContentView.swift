@@ -11,8 +11,8 @@ struct ContentView: View {
     
     @State var numText1 = ""
     @State var numText2 = ""
-    @State var flag1 = true
-    @State var flag2 = true
+    @State var isMinus1 = true
+    @State var isMinus2 = true
     @State var updateNum1 = 0
     @State var updateNum2 = 0
     @State var total = 0
@@ -21,38 +21,18 @@ struct ContentView: View {
         
         VStack {
             HStack {
-                VStack{
-                    TextField("", text: $numText1)
-                        .frame(width: 70,height: 50)
-                        .border(Color.black)
-                        .padding()
-                    HStack{
-                        Text("+")
-                        Toggle("", isOn: $flag1)
-                        Text("-")
-                    }
-                    .fixedSize()
-                }
-                VStack{
-                    TextField("", text: $numText2)
-                        .frame(width: 70,height: 50)
-                        .border(Color.black)
-                        .padding()
-                    HStack{
-                        Text("+")
-                        Toggle("", isOn: $flag2)
-                        Text("-")
-                    }
-                    .fixedSize()
-                }
+                NumberInputView(numText: $numText1, isMinus: $isMinus1)
+                NumberInputView(numText: $numText2, isMinus: $isMinus2)
             }
             .padding()
+
             Button {
                 calculation()
             } label: {
                 Text("Button")
             }
             .padding()
+
             HStack{
                 Spacer()
                 Text("\(updateNum1)")
@@ -61,17 +41,39 @@ struct ContentView: View {
                 Spacer()
             }
             .padding()
+
             Text("\(total)")
         }
     }
+
     func calculation() {
         let num1 = (Int(numText1)) ?? 0
         let num2 = (Int(numText2)) ?? 0
        
-        updateNum1 = flag1 ? -num1 : num1
-        updateNum2 = flag2 ? -num2 : num2
+        updateNum1 = isMinus1 ? -num1 : num1
+        updateNum2 = isMinus2 ? -num2 : num2
         
         total = updateNum1 + updateNum2
+    }
+}
+
+struct NumberInputView: View {
+    @Binding var numText: String
+    @Binding var isMinus: Bool
+
+    var body: some View {
+        VStack{
+            TextField("", text: $numText)
+                .frame(width: 70,height: 50)
+                .border(Color.black)
+                .padding()
+            HStack{
+                Text("+")
+                Toggle("", isOn: $isMinus)
+                Text("-")
+            }
+            .fixedSize()
+        }
     }
 }
 
